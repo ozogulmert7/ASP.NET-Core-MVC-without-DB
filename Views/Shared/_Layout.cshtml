@@ -1,0 +1,22 @@
+﻿<!doctype html>
+<html lang="en">
+
+@{await Html.RenderPartialAsync("_Head");}
+
+
+<body>
+@{await Html.RenderPartialAsync("_Header");}
+@RenderBody();
+
+@{await Html.RenderPartialAsync("_Footer");}
+    
+@{await Html.RenderPartialAsync("_Scripts");}
+<script>
+    document.querySelector('#return-to-top').addEventListener('click', function() {
+  window.scrollTo(0, 0);
+});
+
+</script>
+</body>
+
+</html>
